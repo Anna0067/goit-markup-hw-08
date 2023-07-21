@@ -1,0 +1,188 @@
+.footer {
+    font-style: normal;
+    font-size: $fontSizeSmall;
+    color: $titleColor;
+    line-height: 1.7;
+    background-color: $bgColor;
+
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+    &__logo {
+        font-family: $fontFamilyGlobal;
+        letter-spacing: 0.72px;
+        font-style: normal;
+        color: $titleColor;
+        font-weight: 700;
+        font-size: 26px;
+        background-color: $bgColor;
+        text-decoration: none;
+
+        &--web {
+            color: $accentColor;
+        }
+    }
+    &__address {
+        font-style: normal;
+        padding-top: 20px;
+        padding-bottom: 9px;
+        line-height: 1, 7;
+        justify-content: center;
+    }
+    &__contact {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: $fontSizeSmall;
+        line-height: 1.7;
+        cursor: pointer;
+
+        &:focus {
+            color: $accentColor;
+            transition-duration: 250ms;
+            transition-timing-function: $cubicBezier;
+        }
+    }
+    &__social {
+        margin-top: 20px;
+        justify-content: center;
+
+        &--name {
+            font-family: $fontFamilyGlobal;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            font-style: normal;
+            padding-top: 60px;
+        }
+        &--list {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        &--item {
+            fill: $titleColor;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.25);
+            margin-top: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            align-items: center;
+
+            &:focus,
+            &:hover {
+                background-color: $accentColor;
+                border-radius: 50%;
+                transition-duration: 250ms;
+                transition-timing-function: $cubicBezier;
+            }
+        }
+    }
+    &__button {
+        color: $titleColor;
+        cursor: pointer;
+        background-color: $accentColor;
+        font-weight: 700;
+        font-size: $fontSizeMedium;
+        width: 200px;
+        height: 50px;
+        margin-top: 30px;
+    }
+
+    &__newsletter {
+        padding-top: 40px;
+
+        &--name {
+            font-family: $fontFamilyGlobal;
+            font-weight: 700;
+            font-size: $fontSizeSmall;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            font-style: normal;
+            padding-bottom: 20px;
+        }
+
+        &--input {
+            width: 450px;
+            height: 50px;
+            color: $contactColor;
+            background-color: inherit;
+            border: 1px solid $social-iconColor;
+            border-radius: 4px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &--icon {
+            fill: $titleColor;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        width: 100%;
+
+        &__sections {
+            display: inline-flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__social {
+            margin-top: 0;
+
+            &--name {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer__button {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .footer__sections {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 252px;
+
+        &__contact {
+            &:active,
+            &:hover {
+                color: $accentColor;
+                transition-duration: 250ms;
+                transition-timing-function: $cubicBezier;
+            }
+        }
+        &__social {
+            justify-content: center;
+
+            &--item {
+                &:focus,
+                &:hover {
+                    background-color: $accentColor;
+                    border-radius: 50%;
+                    transition-duration: 250ms;
+                    transition-timing-function: $cubicBezier;
+                }
+            }
+        }
+        &__newsletter {
+            display: flex;
+            flex-direction: row;
+        }
+        &__button {
+            display: flex;
+            padding-bottom: 20px;
+        }
+    }
+}

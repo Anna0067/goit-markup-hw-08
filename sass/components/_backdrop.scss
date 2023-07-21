@@ -1,0 +1,20 @@
+.backdrop {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: not-allowed;
+    transform: scale(1);
+    transition-duration: 250ms;
+    transition-timing-function: $cubicBezier;
+}
+@media screen and (min-width: 768px) {
+    .backdrop {
+        top: 20px;
+        bottom: 20px;
+    }
+}

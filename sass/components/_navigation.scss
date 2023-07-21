@@ -1,0 +1,265 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    list-style: none;
+
+    &__mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 130px;
+    }
+
+    &__icon {
+        background-color: transparent;
+        border: none;
+        height: 16px;
+        cursor: pointer;
+        fill: $primaryColor;
+        justify-content: flex-end;
+
+        &:focus {
+            fill: $accentColor;
+        }
+
+        @media screen and (min-width: 481px) {
+            display: none;
+        }
+    }
+
+    &__left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 46px;
+        list-style: none;
+    }
+
+    &__logo {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.4;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        text-shadow: 2px, 2px, 4px, $primaryColor;
+        font-family: $fontFamilyGlobal;
+        letter-spacing: 0.03em;
+        text-shadow: 2px, 2px, 4px, $textColor;
+        color: $accentColor;
+        color: $primaryColor;
+        padding-left: 15px;
+        padding-right: 160px;
+
+        &--web {
+            color: $accentColor;
+        }
+    }
+
+    &__links {
+        color: $primaryColor;
+        cursor: pointer;
+        font-size: inherit;
+        font-weight: 500;
+        text-decoration: none;
+        display: flex;
+
+        &:active,
+        &:hover {
+            color: $accentColor;
+            transition-duration: 250ms;
+            transition-timing-function: $cubicBezier;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &__links {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 617px) {
+        .navigation__links,
+        .navigation__underscore {
+            display: none;
+        }
+    }
+
+    &__icon {
+        fill: $primaryColor;
+        cursor: pointer;
+        font-weight: 500;
+        justify-content: right;
+        font-size: $fontSizeSmall;
+        transition-duration: 250ms;
+        transition-timing-function: $cubicBezier;
+
+        &:active,
+        &:hover {
+            color: $accentColor;
+            fill: $accentColor;
+        }
+    }
+
+    &__underscore {
+        position: relative;
+        top: 28px;
+
+        @media screen and (min-width: 481px) {
+            &__underscore {
+                display: none;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                display: block;
+                width: 53px;
+                height: 4px;
+                background-color: $accentColor;
+                border-radius: 2px;
+            }
+        }
+
+        &__underscore-portfolio {
+            position: relative;
+            top: 28px;
+
+            &__underscore-portfolio::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                display: block;
+                width: 58px;
+                height: 4px;
+                background-color: $accentColor;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .navigation__right {
+        display: none;
+    }
+}
+@media screen and (max-width: 623px) {
+    .navigation__right {
+        display: none;
+    }
+}
+.main__button {
+    color: $titleColor;
+    cursor: pointer;
+    background-color: $accentColor;
+    font-weight: 700;
+    font-size: $fontSizeMedium;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80px;
+        list-style: none;
+
+        &__logo {
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+        &__right {
+            display: block;
+            justify-content: flex-end;
+            text-decoration: none;
+            list-style: none;
+            color: $contactColor;
+            font-size: 12px;
+            font-family: $fontFamilyGlobal;
+            font-style: normal;
+            font-weight: 500;
+            padding-top: 21px;
+            padding-right: 10px;
+        }
+
+        &__left {
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+
+        &__links {
+            color: $primaryColor;
+            cursor: pointer;
+            font-size: inherit;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+
+            &:active,
+            &:focus {
+                color: $accentColor;
+                transition-duration: 250ms;
+                transition-timing-function: $cubicBezier;
+            }
+        }
+        &__icons {
+            fill: $contactColor;
+            cursor: pointer;
+            color: $contactColor;
+            font-size: 14px;
+            font-size: inherit;
+            font-weight: 500;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__right {
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            padding-left: 50px;
+            padding-top: 5px;
+            font-size: $fontSizeMedium;
+        }
+        &__links {
+            color: $primaryColor;
+            cursor: pointer;
+            font-size: inherit;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+
+            &:hover,
+            &:focus {
+                color: $accentColor;
+                fill: $accentColor;
+                transition-duration: 250ms;
+                transition-timing-function: $cubicBezier;
+            }
+        }
+        &__icons {
+            fill: $contactColor;
+            cursor: pointer;
+            color: $contactColor;
+            font-size: 14px;
+            font-size: inherit;
+            font-weight: 500;
+
+            &:hover,
+            &:focus {
+                color: $accentColor;
+                fill: $accentColor;
+                transition-duration: 250ms;
+                transition-timing-function: $cubicBezier;
+            }
+        }
+    }
+}

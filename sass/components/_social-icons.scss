@@ -1,0 +1,29 @@
+.social-icons {
+    display: flex;
+    fill: $social-iconColor;
+    justify-content: center;
+    margin: auto;
+    list-style: none;
+    padding-top: 12px;
+    max-height: 44px;
+    max-width: 206px;
+
+    &__item {
+        margin: auto;
+        fill: $social-iconColor;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        padding: 12px;
+
+        &__item:hover,
+        &__item:focus {
+            fill: $titleColor;
+            background-color: $accentColor;
+            padding: 10px;
+            border-radius: 50%;
+            transition-duration: 250ms;
+            transition-timing-function: $cubicBezier;
+        }
+    }
+}
